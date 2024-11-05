@@ -1,18 +1,27 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "@chzzk-gamble/typescript-config/nextjs.json",
   "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "_panda/*": ["./styled-system/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": false,
+    "strictNullChecks": true,
+    "types": ["@pandacss/dev"]
   },
   "include": [
     "next-env.d.ts",
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "styled-system"
   ],
   "exclude": ["node_modules"]
 }

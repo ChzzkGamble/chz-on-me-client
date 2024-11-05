@@ -1,0 +1,7 @@
+{
+  "extends": "@chzzk-gamble/typescript-config/nextjs.json",
+  "include": [
+    "src"
+  ],
+  "exclude": ["node_modules"]
+}

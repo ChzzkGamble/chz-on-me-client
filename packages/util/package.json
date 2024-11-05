@@ -1,0 +1,15 @@
+{
+  "name": "@chzzk-gamble/util",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0"
+  },
+  "devDependencies": {
+    "@chzzk-gamble/typescript-config": "workspace:*",
+    "@chzzk-gamble/eslint-config": "workspace:*",
+    "@types/eslint": "^8.56.5",
+    "typescript": "5.5.4"
+  }
+}
