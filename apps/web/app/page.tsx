@@ -1,8 +1,8 @@
-import { Button } from "@chzzk-gamble/ui";
 import "./global.css"
+import { Header } from "../components"
 
 export default function Home() {
   return (
-    <Button variant="solid">Hello</Button>
+    <Header />
   );
 }

@@ -32,6 +32,9 @@
     "storybook": {
       "dependsOn": [
         "^storybook"
+      ],
+      "outputs": [
+        "styled-system/**"
       ]
     }
   }

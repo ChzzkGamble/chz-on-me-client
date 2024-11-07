@@ -1,8 +1,19 @@
+// {
+//   "extends": "@chzzk-gamble/typescript-config/react-library.json",
+//   "compilerOptions": {
+//     "outDir": "dist"
+//   },
+//   "include": ["src", "turbo"],
+//   "exclude": ["node_modules", "dist"]
+// }
 {
   "extends": "@chzzk-gamble/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "paths": {
+      "_panda/*": ["./styled-system/*"]
+    },
+    "types": ["@pandacss/dev"]
   },
-  "include": ["src", "turbo"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src", "**/*.ts", "**/*.tsx", "styled-system"],
+  "exclude": ["node_modules"]
 }

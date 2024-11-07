@@ -1,7 +1,8 @@
-import { transformObjectTokens } from '@chzzk-gamble/util/src/shared/panda/transformObjectTokens';
 import { PRIMITIVE_COLORS } from '../token/color/primitive';
 import { defineTokens } from "@pandacss/dev";
+import { PRIMITIVE_TYPOGRAPHY } from '../token/typography/primitive';
 
 export const tokens = defineTokens({
-  ...transformObjectTokens(PRIMITIVE_COLORS)
+  colors: PRIMITIVE_COLORS,
+  ...PRIMITIVE_TYPOGRAPHY
 })

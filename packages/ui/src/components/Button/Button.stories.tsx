@@ -47,7 +47,7 @@ type Story = StoryObj<typeof meta>;
 export const Solid: Story = {
   args: {
     children: '버튼',
-    variant: 'solid'
+    variant: 'primary'
   },
   parameters: {
     docs: {
@@ -55,6 +55,13 @@ export const Solid: Story = {
         story: '기본적인 Solid 버튼입니다. 주요 액션에 사용됩니다.'
       }
     }
+  }
+};
+
+export const Secondary: Story = {
+  args: {
+    children: '버튼',
+    variant: 'secondary'
   }
 };
 
