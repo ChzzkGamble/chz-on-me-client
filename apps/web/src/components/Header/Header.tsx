@@ -1,6 +1,6 @@
 "use client";
 
-import { Text } from "@chzzk-gamble/ui";
+import { Text } from "@chz-on-me/ui";
 import { headerStyle, navStyle, streamerImgStyle, streamerInfoStyle } from "./Header.style";
 import { HeaderProps } from "./Header.type";
 import Link from "next/link";

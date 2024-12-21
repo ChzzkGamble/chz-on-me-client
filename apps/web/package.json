@@ -12,8 +12,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@chzzk-gamble/ui": "workspace:*",
-    "@chzzk-gamble/util": "workspace:*",
+    "@chz-on-me/ui": "workspace:*",
+    "@chz-on-me/util": "workspace:*",
     "@tanstack/react-query": "^5.62.2",
     "next": "14.2.6",
     "react": "18.3.1",
@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
-    "@chzzk-gamble/eslint-config": "workspace:*",
-    "@chzzk-gamble/typescript-config": "workspace:*",
+    "@chz-on-me/eslint-config": "workspace:*",
+    "@chz-on-me/typescript-config": "workspace:*",
     "@pandacss/dev": "^0.47.0",
     "@storybook/addon-essentials": "^8.4.2",
     "@storybook/addon-interactions": "^8.4.2",

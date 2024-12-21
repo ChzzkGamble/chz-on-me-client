@@ -20,10 +20,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@chzzk-gamble/ui':
+      '@chz-on-me/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@chzzk-gamble/util':
+      '@chz-on-me/util':
         specifier: workspace:*
         version: link:../../packages/util
       '@tanstack/react-query':
@@ -42,10 +42,10 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^3.2.2
         version: 3.2.2(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
-      '@chzzk-gamble/eslint-config':
+      '@chz-on-me/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@chzzk-gamble/typescript-config':
+      '@chz-on-me/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@pandacss/dev':
@@ -135,13 +135,13 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^3.2.2
         version: 3.2.2(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
-      '@chzzk-gamble/eslint-config':
+      '@chz-on-me/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@chzzk-gamble/typescript-config':
+      '@chz-on-me/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-      '@chzzk-gamble/util':
+      '@chz-on-me/util':
         specifier: workspace:*
         version: link:../util
       '@pandacss/dev':
@@ -208,10 +208,10 @@ importers:
         specifier: ^1.7.9
         version: 1.7.9
     devDependencies:
-      '@chzzk-gamble/eslint-config':
+      '@chz-on-me/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@chzzk-gamble/typescript-config':
+      '@chz-on-me/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/eslint':

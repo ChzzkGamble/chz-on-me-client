@@ -2,7 +2,7 @@
 module.exports = {
   root: true,
   extends: [
-    "@chzzk-gamble/eslint-config/react-internal.js",
+    "@chz-on-me/eslint-config/react-internal.js",
     "plugin:storybook/recommended"
   ],
   parser: "@typescript-eslint/parser",

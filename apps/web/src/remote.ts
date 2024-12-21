@@ -1,4 +1,4 @@
-import { http } from "@chzzk-gamble/util";
+import { http } from "@chz-on-me/util";
 
 export interface PostConnectParams {
   channelName: string;

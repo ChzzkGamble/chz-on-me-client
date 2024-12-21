@@ -1,5 +1,5 @@
 {
-  "extends": "@chzzk-gamble/typescript-config/nextjs.json",
+  "extends": "@chz-on-me/typescript-config/nextjs.json",
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],

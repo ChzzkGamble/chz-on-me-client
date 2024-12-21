@@ -18,9 +18,9 @@ This Turborepo includes the following packages/apps:
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@chzzk-gamble/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@chzzk-gamble/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@chzzk-gamble/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@chz-on-me/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@chz-on-me/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@chz-on-me/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

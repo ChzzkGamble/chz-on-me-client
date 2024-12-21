@@ -1,5 +1,5 @@
 {
-  "name": "@chzzk-gamble/ui",
+  "name": "@chz-on-me/ui",
   "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",
@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",
-    "@chzzk-gamble/eslint-config": "workspace:*",
-    "@chzzk-gamble/typescript-config": "workspace:*",
-    "@chzzk-gamble/util": "workspace:*",
+    "@chz-on-me/eslint-config": "workspace:*",
+    "@chz-on-me/typescript-config": "workspace:*",
+    "@chz-on-me/util": "workspace:*",
     "@pandacss/dev": "^0.47.0",
     "@storybook/addon-essentials": "^8.4.2",
     "@storybook/addon-interactions": "^8.4.2",

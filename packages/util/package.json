@@ -1,5 +1,5 @@
 {
-  "name": "@chzzk-gamble/util",
+  "name": "@chz-on-me/util",
   "main": "src/index.ts",
   "version": "0.0.0",
   "private": true,
@@ -8,8 +8,8 @@
     "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
-    "@chzzk-gamble/eslint-config": "workspace:*",
-    "@chzzk-gamble/typescript-config": "workspace:*",
+    "@chz-on-me/eslint-config": "workspace:*",
+    "@chz-on-me/typescript-config": "workspace:*",
     "@types/eslint": "^8.56.5",
     "typescript": "5.5.4"
   },

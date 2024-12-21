@@ -1,4 +1,4 @@
-import {tokens, semanticTokens, textStyles} from '@chzzk-gamble/ui'
+import {tokens, semanticTokens, textStyles} from '@chz-on-me/ui'
 import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({

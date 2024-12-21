@@ -1,6 +1,6 @@
 "use client";
 
-import { Input, Text } from "@chzzk-gamble/ui";
+import { Input, Text } from "@chz-on-me/ui";
 
 export function Header() {
   return <header>

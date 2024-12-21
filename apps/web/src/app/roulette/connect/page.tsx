@@ -3,7 +3,7 @@
 import { usePostConnect } from "@/hooks/queries/usePostConnect";
 import { usePostRoulette } from "@/hooks/queries/usePostRoulette";
 // import { postConnect, postRoulette } from "@/remote";
-import { Input, Button } from "@chzzk-gamble/ui";
+import { Input, Button } from "@chz-on-me/ui";
 import { Stack } from "_panda/jsx";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";

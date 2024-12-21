@@ -1,5 +1,5 @@
 {
-  "extends": "@chzzk-gamble/typescript-config/react-library.json",
+  "extends": "@chz-on-me/typescript-config/react-library.json",
   "compilerOptions": {
     "paths": {
       "_panda/*": ["./styled-system/*"]
