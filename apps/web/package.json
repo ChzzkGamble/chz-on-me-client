@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@chzzk-gamble/ui": "workspace:*",
+    "@chzzk-gamble/util": "workspace:*",
+    "@tanstack/react-query": "^5.62.2",
     "next": "14.2.6",
     "react": "18.3.1",
     "react-dom": "18.3.1"
