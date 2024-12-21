@@ -1,7 +1,8 @@
 "use client";
 import { Button, Roulette, Text } from "@chz-on-me/ui";
-import { HStack, Stack } from "_panda/jsx";
+import { HStack, VStack } from "_panda/jsx";
 import { useState } from "react";
+import { RouletteTable } from "../../components/RouletteTable/RouletteTable";
 
 const MOCK = [
     {
@@ -46,13 +47,20 @@ export default function RoulettePage() {
   };
 
   return (
-    <Stack gap="2rem" justify="center" align="center" height="100vh">
-      <Text>{MOCK.find(option => option.id === selectedOption)?.name}</Text>
-      <Roulette options={MOCK} onChange={handleChange} onEnd={handleEnd} isSpinning={isSpinning} />
-      <HStack>
+    <HStack gap="4rem" justify="center"  height="100vh">
+      <VStack
+        gap="2rem"
+        justify="center"
+        height="100vh"
+      >
+        <Text>{MOCK.find(option => option.id === selectedOption)?.name}</Text>
+        <Roulette options={MOCK} onChange={handleChange} onEnd={handleEnd} isSpinning={isSpinning} />
+        <HStack>
         <Button onClick={handleSpin} disabled={isVoting || isSpinning}>룰렛 돌리기</Button>
         <Button onClick={handleVoting} disabled={isSpinning}>{isVoting ? '투표 종료' : '투표 시작'}</Button>
       </HStack>
-    </Stack>
+      </VStack>
+      <RouletteTable options={MOCK} />
+    </HStack>
   );
 }
