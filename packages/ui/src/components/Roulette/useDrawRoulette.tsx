@@ -22,9 +22,8 @@ export function useDrawRoulette({options, canvasRef}: UseDrawRouletteProps) {
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
 
-      options.forEach(({name, vote, percentage}, index) => {
+      options.forEach(({name, percentage}, index) => {
         const pieRadian = (Number(percentage.replace('%', '')) / 100) * Math.PI * 2;
-        console.log(startRadian, pieRadian);
         endRadian = startRadian + pieRadian;
         // TODO: (@Todari) 조각에 따른 컬러로 변경 필요
         const pastelColors = [
@@ -46,7 +45,7 @@ export function useDrawRoulette({options, canvasRef}: UseDrawRouletteProps) {
           '#FFB3BA', // 로즈
           '#FFA3A3'  // 연한 레드
         ];
-        console.log(pastelColors[index % pastelColors.length]);
+        
         ctx.fillStyle = pastelColors[index % pastelColors.length] ?? "#FFB3BA";
         ctx.beginPath();
         ctx.moveTo(centerX, centerY);
