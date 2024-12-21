@@ -1,11 +1,58 @@
 "use client";
-import { Stack } from "_panda/jsx";
+import { Button, Roulette, Text } from "@chz-on-me/ui";
+import { HStack, Stack } from "_panda/jsx";
+import { useState } from "react";
+
+const MOCK = [
+    {
+        "id": 1,
+        "name": "짜장면",
+        "vote": 3,
+        "percentage": "50.00%"
+    },
+    {
+        "id": 2,
+        "name": "짬뽕",
+        "vote": 2,
+        "percentage": "33.33%"
+    },
+    {
+        "id": 3,
+        "name": "탕수육",
+        "vote": 1,
+        "percentage": "16.67%"
+    }
+]
 
 export default function RoulettePage() {
+  const [selectedOption, setSelectedOption] = useState<number>(MOCK.find(option => option.vote === 1)?.id ?? 0);
+  const [isSpinning, setIsSpinning] = useState(false);
+  const [isVoting, setIsVoting] = useState(false);
+
+  const handleChange = (index: number) => {
+    setSelectedOption(index);
+  };
+
+  const handleSpin = () => {
+    setIsSpinning(true);
+  };
+
+  const handleVoting = () => {
+    setIsVoting(!isVoting);
+  };
+
+  const handleEnd = () => {
+    setIsSpinning(false);
+  };
 
   return (
     <Stack gap="2rem" justify="center" align="center" height="100vh">
-      
+      <Text>{MOCK.find(option => option.id === selectedOption)?.name}</Text>
+      <Roulette options={MOCK} onChange={handleChange} onEnd={handleEnd} isSpinning={isSpinning} />
+      <HStack>
+        <Button onClick={handleSpin} disabled={isVoting || isSpinning}>룰렛 돌리기</Button>
+        <Button onClick={handleVoting} disabled={isSpinning}>{isVoting ? '투표 종료' : '투표 시작'}</Button>
+      </HStack>
     </Stack>
   );
 }
