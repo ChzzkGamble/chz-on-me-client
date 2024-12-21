@@ -3,6 +3,7 @@ import { cva } from '_panda/css';
 export const textStyles = cva({
   base: {
     fontFamily: 'Pretendard',
+    display: 'inline-block',
   },
   variants: {
     size: {

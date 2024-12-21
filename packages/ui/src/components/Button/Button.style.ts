@@ -2,7 +2,6 @@ import { cva } from '_panda/css'
 
 export const buttonStyle = cva({
   base: {
-    display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
@@ -11,6 +10,9 @@ export const buttonStyle = cva({
     _disabled: {
       cursor: 'not-allowed',
       opacity: 0.5
+    },
+    _placeholder: {
+      color: 'light'
     }
   },
   variants: {
@@ -58,28 +60,37 @@ export const buttonStyle = cva({
     },
     size: {
       sm: {
-        rounded: '0.625rem',
-        minW: '8',
-        px: '4',
-        py: '2',
-        textStyle: 'body',
-        lineHeight: '1'
-      },
-      md: {
         rounded: '0.75rem',
-        minW: '12',
-        px: '5',
-        py: '2.5',
-        textStyle: 'large',
-        lineHeight: '1'
-      },
-      lg: {
-        rounded: '1rem',
-        minW: '14',
+        minW: '8',
         px: '6',
         py: '3',
+        textStyle: 'body',
+        lineHeight: 'none',
+        _placeholder: {
+          textStyle: 'body'
+        }
+      },
+      md: {
+        rounded: '1rem',
+        minW: '12',
+        px: '8',
+        py: '4',
+        textStyle: 'large',
+        lineHeight: 'none',
+        _placeholder: {
+          textStyle: 'large'
+        }
+      },
+      lg: {
+        rounded: '1.25rem',
+        minW: '14',
+        px: '10',
+        py: '5',
         textStyle: 'subtitle',
-        lineHeight: '1'
+        lineHeight: 'none',
+        _placeholder: {
+          textStyle: 'subtitle'
+        }
       }
     },
   },

@@ -1,13 +1,22 @@
 import { cva } from '../../../styled-system/css';
 
+export const inputLabelStyle = cva({
+  base: {
+    paddingInline: '0.5rem',
+    width: '100%'
+  }
+});
+
 export const inputStyle = cva({
   base: {
-    width: '100%',
+    width: 'full',
+    bg: 'white',
     border: '1px solid',
     borderColor: 'light',
     color: 'dark',
     outline: 'none',
     transition: 'all 0.2s ease-in-out',
+    boxSizing: 'border-box',
     _placeholder: {
       color: 'light'
     },
@@ -51,27 +60,30 @@ export const inputStyle = cva({
     },
     size: {
       sm: {
-        rounded: '0.5rem',
-        w: '60',
+        rounded: '0.75rem',
+        h: '2.5rem',
+        w: '80',
         px: '3',
-        py: '1.5',
-        fontSize: 'small',
+        py: '3',
+        textStyle: 'small',
         lineHeight: 'none'
       },
       md: {
-        rounded: '0.625rem',
-        w: '60',
+        rounded: '1rem',
+        h: '3.25rem',
+        w: '80',
         px: '4',
-        py: '2',
-        fontSize: 'body',
+        py: '4',
+        textStyle: 'body',
         lineHeight: 'none'
       },
       lg: {
-        rounded: '0.75rem',
-        w: '60',
-        px: '6',
-        py: '3',
-        fontSize: 'large',
+        rounded: '1rem',
+        h: '4rem',
+        w: '80',
+        px: '5',
+        py: '5',
+        textStyle: 'large',
         lineHeight: 'none'
       }
     }

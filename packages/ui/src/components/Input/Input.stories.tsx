@@ -16,6 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     placeholder: '입력해주세요',
+    label: '라벨'
   },
 };
 
@@ -23,6 +24,7 @@ export const Small: Story = {
   args: {
     size: 'sm',
     placeholder: '입력해주세요',
+    label: '라벨'
   },
 };
 
@@ -30,6 +32,7 @@ export const Medium: Story = {
   args: {
     size: 'md', 
     placeholder: '입력해주세요',
+    label: '라벨'
   },
 };
 
@@ -37,20 +40,7 @@ export const Large: Story = {
   args: {
     size: 'lg',
     placeholder: '입력해주세요', 
-  },
-};
-
-export const Error: Story = {
-  args: {
-    status: 'error',
-    placeholder: '입력해주세요',
-  },
-};
-
-export const Success: Story = {
-  args: {
-    status: 'success',
-    placeholder: '입력해주세요',
+    label: '라벨'
   },
 };
 
@@ -58,5 +48,6 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     placeholder: '입력해주세요',
+    label: '라벨'
   },
 };
