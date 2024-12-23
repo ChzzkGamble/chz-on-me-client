@@ -15,20 +15,20 @@ export function Roulette({options, onChange, onEnd, isSpinning}: RouletteProps) 
   const {controls} = useRouletteAnimation({isSpinning});
 
   return (
+    <Wrap className={rouletteWrapper()} ref={wrapperRef}>
       <motion.div
-        className={rouletteWrapper()}
-        ref={wrapperRef}
         initial={{rotate: -90}}
         animate={controls}
         onUpdate={(last) => {
-        onChange(getSelectedId(last.rotate as number));
-      }}
-      onAnimationComplete={() => {
-        onEnd();
-      }}
-    >
+          onChange(getSelectedId(last.rotate as number));
+        }}
+        onAnimationComplete={() => {
+          onEnd();
+        }}
+      >
         {/* <canvas ref={canvasRef} /> */}
         <RouletteSvg options={options} wrapperRef={wrapperRef}/>
       </motion.div>
-    )
+    </Wrap>
+  )
 }
