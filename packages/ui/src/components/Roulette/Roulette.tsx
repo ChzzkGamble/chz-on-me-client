@@ -26,7 +26,6 @@ export function Roulette({options, onChange, onEnd, isSpinning}: RouletteProps) 
           onEnd();
         }}
       >
-        {/* <canvas ref={canvasRef} /> */}
         <RouletteSvg options={options} wrapperRef={wrapperRef}/>
       </motion.div>
     </Wrap>
