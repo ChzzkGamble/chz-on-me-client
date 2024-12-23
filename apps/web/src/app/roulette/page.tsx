@@ -26,7 +26,7 @@ const MOCK = [
 ]
 
 export default function RoulettePage() {
-  const [selectedOption, setSelectedOption] = useState<number>(MOCK.find(option => option.vote === 1)?.id ?? 0);
+  const [selectedOption, setSelectedOption] = useState<number>(MOCK[0]?.id ?? 0);
   const [isSpinning, setIsSpinning] = useState(false);
   const [isVoting, setIsVoting] = useState(false);
 

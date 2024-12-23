@@ -31,7 +31,7 @@ export function RouletteSvg({ options, wrapperRef }: UseDrawRouletteProps) {
       }
 
       options.forEach(({ name, percentage }, index) => {
-        const sliceAngle = (Number(percentage.replace('%', '')) / 100) * 360;
+        const sliceAngle = (Number(percentage.replace('%', '')) / 100) * (options.length === 1 ? 359.9999 : 360);
         const endAngle = startAngle + sliceAngle;
 
         const x1 = centerX + radius * Math.cos((Math.PI * startAngle) / 180);
