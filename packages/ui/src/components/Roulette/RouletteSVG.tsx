@@ -55,7 +55,21 @@ export function RouletteSvg({ options, wrapperRef }: UseDrawRouletteProps) {
 
         // 텍스트 추가
         const midAngle = (startAngle + endAngle) / 2;
-        const textRadius = radius * 0.6;
+        
+        // 텍스트 길이 제한 처리
+        const displayText = name.length > 12 ? name.slice(0, 12) + '..' : name;
+        
+        // 임시 텍스트 요소를 만들어 텍스트 길이 측정
+        const tempText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        tempText.setAttribute('font-family', 'Pretendard');
+        tempText.setAttribute('font-size', '16');
+        tempText.textContent = displayText;
+        svg.appendChild(tempText);
+        const textWidth = tempText.getComputedTextLength();
+        svg.removeChild(tempText);
+
+        // 텍스트 반지름 조정
+        const textRadius = radius - (radius - textWidth * 0.25) * 0.5;
         const textX = centerX + textRadius * Math.cos((Math.PI * midAngle) / 180);
         const textY = centerY + textRadius * Math.sin((Math.PI * midAngle) / 180);
 
@@ -69,7 +83,7 @@ export function RouletteSvg({ options, wrapperRef }: UseDrawRouletteProps) {
         text.setAttribute('font-size', '16');
         text.setAttribute('font-weight', 'bold');
         text.setAttribute('transform', `rotate(${midAngle}, ${textX}, ${textY})`);
-        text.textContent = name;
+        text.textContent = displayText;
         svg.appendChild(text);
 
         startAngle = endAngle;
