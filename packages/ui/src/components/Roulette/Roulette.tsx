@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { RouletteSvg } from "./RouletteSVG";
 import { useRouletteAnimation } from "./useRouletteAnimation";
 import { useRoulette } from "./useRoulette";
-import { rouletteWrapper } from "./Roulette.style";
+import { rouletteArrow, rouletteWrapper } from "./Roulette.style";
 import { Wrap } from "_panda/jsx";
 
 export function Roulette({options, onChange, onEnd, isSpinning}: RouletteProps) {
@@ -16,6 +16,7 @@ export function Roulette({options, onChange, onEnd, isSpinning}: RouletteProps) 
 
   return (
     <Wrap className={rouletteWrapper()} ref={wrapperRef}>
+      <div className={rouletteArrow()} />
       <motion.div
         initial={{rotate: -90}}
         animate={controls}
