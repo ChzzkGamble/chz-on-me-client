@@ -3,22 +3,21 @@
 import { useRef, useEffect } from "react";
 import { RouletteProps } from "./Roulette.type";
 import { motion } from "motion/react";
-import { useDrawRoulette } from "./useDrawRoulette";
+import { RouletteSvg } from "./RouletteSVG";
 import { useRouletteAnimation } from "./useRouletteAnimation";
 import { useRoulette } from "./useRoulette";
 import { rouletteWrapper } from "./Roulette.style";
 import { Wrap } from "_panda/jsx";
 
 export function Roulette({options, onChange, onEnd, isSpinning}: RouletteProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const {getSelectedId} = useRoulette(options);
   const {controls} = useRouletteAnimation({isSpinning});
-  useDrawRoulette({options, canvasRef, wrapperRef});
 
   return (
-    <Wrap className={rouletteWrapper()} ref={wrapperRef}>
       <motion.div
+        className={rouletteWrapper()}
+        ref={wrapperRef}
         initial={{rotate: -90}}
         animate={controls}
         onUpdate={(last) => {
@@ -28,8 +27,8 @@ export function Roulette({options, onChange, onEnd, isSpinning}: RouletteProps) 
         onEnd();
       }}
     >
-        <canvas ref={canvasRef} />
+        {/* <canvas ref={canvasRef} /> */}
+        <RouletteSvg options={options} wrapperRef={wrapperRef}/>
       </motion.div>
-    </Wrap>
-  )
+    )
 }
