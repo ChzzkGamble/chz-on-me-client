@@ -4,7 +4,7 @@ import { TextProps } from './Text.type';
 
 export const Text = ({
   size = 'body',
-  className,
+  className = "",
   children,
   color = 'black',
   ...props
@@ -17,7 +17,7 @@ export const Text = ({
   else if (size === 'large') TagComponent = 'h4';
   
   return (
-    <TagComponent className={textStyles({ size, color })} {...props}>
+    <TagComponent className={textStyles({ size, color }) + ' ' + className} {...props}>
       {children}
     </TagComponent>
   );

@@ -2,7 +2,15 @@ import { cva } from "_panda/css/cva.mjs";
 
 export const nameStyle = cva({
   base: {
-    w: '10rem'
+    w: '10rem',
+  },
+});
+
+export const nameTextStyle = cva({
+  base: {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
   },
 });
 
