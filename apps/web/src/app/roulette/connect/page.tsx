@@ -35,7 +35,7 @@ export default function RouletteConnectPage() {
     <Stack gap="2rem" justify="center" align="center" height="100vh">
       <Stack gap="0.5rem" justify="start">
         <Input label="스트리머 이름" placeholder="스트리머 이름을 입력하세요" value={streamerInput} onChange={(e) => setStreamerInput(e.target.value)} />
-        <Input label="치즈 금액" placeholder="치즈 금액을 입력하세요" value={cheeseInput} onChange={(e) => setCheeseInput(e.target.value)} />
+        <Input label="1표 당 치즈 금액" placeholder="1표 당 치즈 금액을 입력하세요" value={cheeseInput} onChange={(e) => setCheeseInput(e.target.value)} />
         <Button type="submit" onClick={handleConnect}>룰렛 생성하기</Button>
       </Stack>
     </Stack>
