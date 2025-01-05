@@ -3,6 +3,9 @@ import { Button, Roulette, Text } from "@chz-on-me/ui";
 import { HStack, VStack } from "_panda/jsx";
 import { useState } from "react";
 import { RouletteTable } from "../../components/RouletteTable/RouletteTable";
+import { RouletteResult } from "@/components/RouletteResult/RouletteResult";
+import { useCreateElement } from "@chz-on-me/ui/src/hooks/useCreateElement";
+import { RouletteResultAnimation } from "@/components/RouletteResultAnimation/RouletteResultAnimation";
 
 const MOCK = [
     {
@@ -29,6 +32,8 @@ export default function RoulettePage() {
   const [selectedOption, setSelectedOption] = useState<number>(MOCK[0]?.id ?? 0);
   const [isSpinning, setIsSpinning] = useState(false);
   const [isVoting, setIsVoting] = useState(false);
+  const [isAnimationStart, setIsAnimationStart] = useState(false);
+  const {element:RouletteResultElement, open, close} = useCreateElement();
 
   const handleChange = (index: number) => {
     setSelectedOption(index);
@@ -36,6 +41,7 @@ export default function RoulettePage() {
 
   const handleSpin = () => {
     setIsSpinning(true);
+    setIsAnimationStart(false);
   };
 
   const handleVoting = () => {
@@ -44,7 +50,15 @@ export default function RoulettePage() {
 
   const handleEnd = () => {
     setIsSpinning(false);
+    setTimeout(() => {
+      setIsAnimationStart(true);
+      handleOpenResult();
+    }, 300);
   };
+
+  const handleOpenResult = () => {
+    open(<RouletteResult result={MOCK.find(option => option.id === selectedOption)?.name ?? ''} close={close} />);
+  }
 
   return (
     <HStack gap="4rem" justify="center"  height="100vh">
@@ -61,6 +75,7 @@ export default function RoulettePage() {
       </HStack>
       </VStack>
       <RouletteTable options={MOCK} />
+      {RouletteResultElement}
     </HStack>
   );
 }
