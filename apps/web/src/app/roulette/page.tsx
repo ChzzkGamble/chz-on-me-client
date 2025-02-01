@@ -1,11 +1,12 @@
 "use client";
 import { Button, Roulette, Text } from "@chz-on-me/ui";
 import { HStack, VStack } from "_panda/jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RouletteTable } from "../../components/RouletteTable/RouletteTable";
 import { RouletteResult } from "@/components/RouletteResult/RouletteResult";
 import { useCreateElement } from "@chz-on-me/ui/src/hooks/useCreateElement";
 import { RouletteResultAnimation } from "@/components/RouletteResultAnimation/RouletteResultAnimation";
+import { useGetRoulette } from "@/hooks/queries/useGetRoulette";
 
 const MOCK = [
     {
@@ -59,6 +60,14 @@ export default function RoulettePage() {
   const handleOpenResult = () => {
     open(<RouletteResult result={MOCK.find(option => option.id === selectedOption)?.name ?? ''} close={close} />);
   }
+
+  const {data, isSuccess} = useGetRoulette();
+
+  useEffect(() => {
+    if (isSuccess) {
+      console.log(data);
+    }
+  }, [isSuccess, data]);
 
   return (
     <HStack gap="4rem" justify="center"  height="100vh">
